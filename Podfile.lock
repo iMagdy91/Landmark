@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Kingfisher (3.10.3)
+  - MBProgressHUD (1.0.0)
+  - ObjectMapper (2.2.8)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - MBProgressHUD
+  - ObjectMapper
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+
+PODFILE CHECKSUM: 8c04c54658589ab8d232c1fb8431cb4f34211e3d
+
+COCOAPODS: 1.2.0.beta.1

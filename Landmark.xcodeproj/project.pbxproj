@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B7F1B888CCD530E1BFAE47 /* Pods_Landmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E799D3554A36F5AF01D54F /* Pods_Landmark.framework */; };
 		79BB56411F250E2200E29AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56401F250E2200E29AAD /* AppDelegate.swift */; };
-		79BB56431F250E2200E29AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56421F250E2200E29AAD /* ViewController.swift */; };
-		79BB56461F250E2200E29AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BB56441F250E2200E29AAD /* Main.storyboard */; };
+		79BB56461F250E2200E29AAD /* LMMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BB56441F250E2200E29AAD /* LMMain.storyboard */; };
 		79BB56481F250E2200E29AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79BB56471F250E2200E29AAD /* Assets.xcassets */; };
 		79BB564B1F250E2200E29AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BB56491F250E2200E29AAD /* LaunchScreen.storyboard */; };
 		79BB56561F250E2200E29AAD /* LandmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56551F250E2200E29AAD /* LandmarkTests.swift */; };
 		79BB56611F250E2200E29AAD /* LandmarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56601F250E2200E29AAD /* LandmarkUITests.swift */; };
+		79BB56741F25137C00E29AAD /* LMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56731F25137C00E29AAD /* LMNetworkManager.swift */; };
+		79BB56771F2513C000E29AAD /* LMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56761F2513C000E29AAD /* LMConstants.swift */; };
+		79BB567A1F25146000E29AAD /* LMBaseStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56791F25146000E29AAD /* LMBaseStoreProtocol.swift */; };
+		79BB567F1F25169200E29AAD /* LMBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB567E1F25169200E29AAD /* LMBaseViewModel.swift */; };
+		79BB56811F2671B900E29AAD /* LMProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56801F2671B900E29AAD /* LMProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3415F10CA2EC998154ACB21A /* Pods-Landmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Landmark/Pods-Landmark.release.xcconfig"; sourceTree = "<group>"; };
 		79BB563D1F250E2200E29AAD /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BB56401F250E2200E29AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79BB56421F250E2200E29AAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79BB56451F250E2200E29AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79BB56451F250E2200E29AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LMMain.storyboard; sourceTree = "<group>"; };
 		79BB56471F250E2200E29AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79BB564A1F250E2200E29AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79BB564C1F250E2200E29AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		79BB565C1F250E2200E29AAD /* LandmarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandmarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BB56601F250E2200E29AAD /* LandmarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkUITests.swift; sourceTree = "<group>"; };
 		79BB56621F250E2200E29AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BB56731F25137C00E29AAD /* LMNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMNetworkManager.swift; sourceTree = "<group>"; };
+		79BB56761F2513C000E29AAD /* LMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMConstants.swift; sourceTree = "<group>"; };
+		79BB56791F25146000E29AAD /* LMBaseStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMBaseStoreProtocol.swift; sourceTree = "<group>"; };
+		79BB567E1F25169200E29AAD /* LMBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMBaseViewModel.swift; sourceTree = "<group>"; };
+		79BB56801F2671B900E29AAD /* LMProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProductModel.swift; sourceTree = "<group>"; };
+		A4E6740FF7E021E93DD6A63D /* Pods-Landmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Landmark/Pods-Landmark.debug.xcconfig"; sourceTree = "<group>"; };
+		C4E799D3554A36F5AF01D54F /* Pods_Landmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B7F1B888CCD530E1BFAE47 /* Pods_Landmark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A23AB92EBD84F30E9B77E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4E799D3554A36F5AF01D54F /* Pods_Landmark.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		353AC19F447F40087549810D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4E6740FF7E021E93DD6A63D /* Pods-Landmark.debug.xcconfig */,
+				3415F10CA2EC998154ACB21A /* Pods-Landmark.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		79BB56341F250E2200E29AAD = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				79BB56541F250E2200E29AAD /* LandmarkTests */,
 				79BB565F1F250E2200E29AAD /* LandmarkUITests */,
 				79BB563E1F250E2200E29AAD /* Products */,
+				353AC19F447F40087549810D /* Pods */,
+				24A23AB92EBD84F30E9B77E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +129,12 @@
 		79BB563F1F250E2200E29AAD /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
-				79BB56401F250E2200E29AAD /* AppDelegate.swift */,
-				79BB56421F250E2200E29AAD /* ViewController.swift */,
-				79BB56441F250E2200E29AAD /* Main.storyboard */,
-				79BB56471F250E2200E29AAD /* Assets.xcassets */,
-				79BB56491F250E2200E29AAD /* LaunchScreen.storyboard */,
-				79BB564C1F250E2200E29AAD /* Info.plist */,
+				79BB567B1F25156B00E29AAD /* Model */,
+				79BB56781F25145200E29AAD /* Store */,
+				79BB56751F2513B400E29AAD /* Util */,
+				79BB56711F25136C00E29AAD /* Network */,
+				79BB566F1F2512A800E29AAD /* View */,
+				79BB566E1F25129200E29AAD /* Supporting Files */,
 			);
 			path = Landmark;
 			sourceTree = "<group>";
@@ -125,6 +157,82 @@
 			path = LandmarkUITests;
 			sourceTree = "<group>";
 		};
+		79BB566E1F25129200E29AAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56401F250E2200E29AAD /* AppDelegate.swift */,
+				79BB56471F250E2200E29AAD /* Assets.xcassets */,
+				79BB56491F250E2200E29AAD /* LaunchScreen.storyboard */,
+				79BB564C1F250E2200E29AAD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79BB566F1F2512A800E29AAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56701F2512AD00E29AAD /* Storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		79BB56701F2512AD00E29AAD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56441F250E2200E29AAD /* LMMain.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		79BB56711F25136C00E29AAD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56731F25137C00E29AAD /* LMNetworkManager.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		79BB56751F2513B400E29AAD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56761F2513C000E29AAD /* LMConstants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		79BB56781F25145200E29AAD /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56791F25146000E29AAD /* LMBaseStoreProtocol.swift */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		79BB567B1F25156B00E29AAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79BB567D1F25167D00E29AAD /* DTO */,
+				79BB567C1F25167700E29AAD /* View Model */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		79BB567C1F25167700E29AAD /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				79BB567E1F25169200E29AAD /* LMBaseViewModel.swift */,
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
+		79BB567D1F25167D00E29AAD /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56801F2671B900E29AAD /* LMProductModel.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79BB56651F250E2200E29AAD /* Build configuration list for PBXNativeTarget "Landmark" */;
 			buildPhases = (
+				2FBBD54A854933CD8E0F1A16 /* [CP] Check Pods Manifest.lock */,
 				79BB56391F250E2200E29AAD /* Sources */,
 				79BB563A1F250E2200E29AAD /* Frameworks */,
 				79BB563B1F250E2200E29AAD /* Resources */,
+				87FC62A9D1791FEECE42100A /* [CP] Embed Pods Frameworks */,
+				8E35A61A69EC9C6C9CA4101D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,7 +348,7 @@
 			files = (
 				79BB564B1F250E2200E29AAD /* LaunchScreen.storyboard in Resources */,
 				79BB56481F250E2200E29AAD /* Assets.xcassets in Resources */,
-				79BB56461F250E2200E29AAD /* Main.storyboard in Resources */,
+				79BB56461F250E2200E29AAD /* LMMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +368,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FBBD54A854933CD8E0F1A16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		87FC62A9D1791FEECE42100A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Landmark/Pods-Landmark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E35A61A69EC9C6C9CA4101D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Landmark/Pods-Landmark-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79BB56391F250E2200E29AAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79BB56431F250E2200E29AAD /* ViewController.swift in Sources */,
 				79BB56411F250E2200E29AAD /* AppDelegate.swift in Sources */,
+				79BB567A1F25146000E29AAD /* LMBaseStoreProtocol.swift in Sources */,
+				79BB56771F2513C000E29AAD /* LMConstants.swift in Sources */,
+				79BB56741F25137C00E29AAD /* LMNetworkManager.swift in Sources */,
+				79BB56811F2671B900E29AAD /* LMProductModel.swift in Sources */,
+				79BB567F1F25169200E29AAD /* LMBaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,12 +462,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79BB56441F250E2200E29AAD /* Main.storyboard */ = {
+		79BB56441F250E2200E29AAD /* LMMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				79BB56451F250E2200E29AAD /* Base */,
 			);
-			name = Main.storyboard;
+			name = LMMain.storyboard;
 			sourceTree = "<group>";
 		};
 		79BB56491F250E2200E29AAD /* LaunchScreen.storyboard */ = {
@@ -415,10 +578,12 @@
 		};
 		79BB56661F250E2200E29AAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E6740FF7E021E93DD6A63D /* Pods-Landmark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RBZ2UQ2323;
 				INFOPLIST_FILE = Landmark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magdy.Landmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,10 +593,12 @@
 		};
 		79BB56671F250E2200E29AAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3415F10CA2EC998154ACB21A /* Pods-Landmark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RBZ2UQ2323;
 				INFOPLIST_FILE = Landmark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magdy.Landmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +683,7 @@
 				79BB56671F250E2200E29AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79BB56681F250E2200E29AAD /* Build configuration list for PBXNativeTarget "LandmarkTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +692,7 @@
 				79BB566A1F250E2200E29AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79BB566B1F250E2200E29AAD /* Build configuration list for PBXNativeTarget "LandmarkUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +701,7 @@
 				79BB566D1F250E2200E29AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
