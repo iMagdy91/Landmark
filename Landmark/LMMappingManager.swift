@@ -24,6 +24,7 @@ class LMMappingManager {
         
         var products        : [LMProductViewModel]  = [LMProductViewModel]()
         converstionTable                            = productModel?.conversion
+        converstionTable?.removeLast() //work around as the last conversion is not valid
         
         if let productArray = productModel?.products {
             

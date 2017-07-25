@@ -28,9 +28,19 @@ class LandmarkUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUI() {
+        
+        let app = XCUIApplication()
+        app.buttons["INR"].tap()
+        
+        let cellsQuery = app.collectionViews.cells
+        cellsQuery.otherElements.containing(.staticText, identifier:"Juniors Cream Bed Guard").element.swipeLeft()
+        let collectionViewCount = app.collectionViews.cells.count
+        app.buttons["AED"].tap()
+        cellsQuery.otherElements.containing(.staticText, identifier:"Juniors Steam Steriliser").element.swipeLeft()
+        let collectionViewCountAfterSegmentChange = app.collectionViews.cells.count
+        
+        XCTAssert(collectionViewCount < collectionViewCountAfterSegmentChange)
     }
     
 }
