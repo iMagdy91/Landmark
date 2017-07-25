@@ -16,8 +16,8 @@ class LMMappingManager {
     /**
      Map LMProductModel to LMProductViewModel.
      
-     - Parameter productModel: LMProductModel to be mapped.
-     - Returns : Mapped LMProductViewModel array.
+     - Parameter productModel   : LMProductModel to be mapped.
+     - Returns                  : Mapped LMProductViewModel array.
      
      */
     class func mapProductModelToProductViewModel(productModel: LMProductModel?) -> [LMProductViewModel] {
@@ -28,8 +28,8 @@ class LMMappingManager {
         if let productArray = productModel?.products {
             
             for product in productArray {
-                
-                let priceInCurrentCurrency  : String?               = mapProduct(product: product, fromCurrency: product.currency, toCurrency: LMProductsStore.defaultCurrency)
+                let priceDouble             : Double?                = Double(product.price ?? "")
+                let priceInCurrentCurrency  : Double?               = mapProduct(price: priceDouble, fromCurrency: product.currency, toCurrency: LMProductsStore.defaultCurrency)
                 let productViewModel        : LMProductViewModel    = LMProductViewModel.init(name: product.name, price: priceInCurrentCurrency, url: product.url, currency: LMProductsStore.defaultCurrency)
                 products.append(productViewModel)
             }
@@ -41,30 +41,61 @@ class LMMappingManager {
     /**
      Map Product price to the required currency.
      
-     - Parameter product: Product to be mapped.
-     - Parameter fromCurrency: Currency to convert from.
-     - Parameter toCurrency: Currency to convert to.
-     - Returns : Converted value.
+     - Parameter price          : Product price to be mapped.
+     - Parameter fromCurrency   : Currency to convert from.
+     - Parameter toCurrency     : Currency to convert to.
+     - Returns                  : Converted value.
      
      */
-    class func mapProduct(product: Product?,
+    class func mapProduct(price: Double?,
                           fromCurrency currencyFrom: Currency?,
-                          toCurrency currencyTo: Currency) -> String? {
+                          toCurrency currencyTo: Currency) -> Double? {
+        if currencyFrom == currencyTo {
+            return price
+        }
+        
         if let converstionTable = converstionTable {
-            let converstionRate: String? = converstionTable.filter{$0.from == currencyFrom && $0.to == currencyTo}.first?.rate
             
-            if let rate = converstionRate {
-                if let rateDoubleValue = Double(rate) {
-                    if let price = product?.price {
-                        if let priceDouble = Double(price) {
-                            let priceAfterConversion = priceDouble * rateDoubleValue
-                            return String(priceAfterConversion)
-                        }
+            var converstionRate: String? = converstionTable.filter{$0.from == currencyFrom && $0.to == currencyTo}.first?.rate
+            
+            if converstionRate == nil {
+                converstionRate = converstionTable.filter{$0.from == currencyTo && $0.to == currencyFrom}.first?.rate
+                if let rate = converstionRate {
+                    if let converstionRateDouble = Double(rate) {
+                        converstionRate = String(1/converstionRateDouble)
                     }
                 }
             }
+            
+            if let rate = converstionRate {
+                if let rateDoubleValue = Double(rate) {
+                    if let price = price {
+                        let priceAfterConversion = price * rateDoubleValue
+                        return priceAfterConversion
+                    }
+                }
+            }
+            
 
         }
         return nil
+    }
+    /**
+     Map Product view model price to the required currency.
+     
+     - Parameter productsViewModel  : Products view model to be mapped.
+     - Parameter toCurrency         : Currency to convert to.
+     
+     */
+    class func mapProductViewModel(productsViewModel:inout [LMProductViewModel]?,
+                                   toCurrency currencyTo: Currency) {
+        
+        if let products = productsViewModel {
+            for productViewModel in products {
+                productViewModel.price = mapProduct(price: productViewModel.price, fromCurrency: productViewModel.currency, toCurrency: currencyTo)
+                productViewModel.currency = currencyTo
+
+            }
+        }
     }
 }

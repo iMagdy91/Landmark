@@ -13,13 +13,13 @@ class LMProductViewModel: LMBaseViewModel {
     
     // MARK: - Properties
     private(set) var name       :String?
-    private(set) var price      :String?
+    var price                   :Double?
     private(set) var url        :String?
-    private(set) var currency   :Currency?
+    var currency                :Currency?
     
     // MARK: - Init
     required init(name: String?,
-                  price: String?,
+                  price: Double?,
                   url: String?,
                   currency: Currency?) {
         self.name       = name

@@ -12,7 +12,7 @@ import ObjectMapper
 class LMProductsStore: LMBaseStoreProtocol {
     
     //Default Values
-    static let defaultCurrency  :Currency = .inr
+    static var defaultCurrency  :Currency = .inr
     
     
     /**

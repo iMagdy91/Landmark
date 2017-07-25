@@ -22,6 +22,11 @@
 		79BB56861F27B8FF00E29AAD /* LMProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56851F27B8FF00E29AAD /* LMProductsStore.swift */; };
 		79BB56881F27BA4100E29AAD /* LMProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56871F27BA4100E29AAD /* LMProductViewModel.swift */; };
 		79BB568A1F27BB5300E29AAD /* LMMappingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56891F27BB5300E29AAD /* LMMappingManager.swift */; };
+		79BB568D1F27D10400E29AAD /* LMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB568C1F27D10400E29AAD /* LMBaseViewController.swift */; };
+		79BB568F1F27D13400E29AAD /* LMProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB568E1F27D13400E29AAD /* LMProductViewController.swift */; };
+		79BB56921F27E13F00E29AAD /* LMProductViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56911F27E13F00E29AAD /* LMProductViewController+UICollectionView.swift */; };
+		79BB56951F27E6A600E29AAD /* LMProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56941F27E6A600E29AAD /* LMProductCollectionViewCell.swift */; };
+		79BB56971F27F0BC00E29AAD /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB56961F27F0BC00E29AAD /* Double+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		79BB56851F27B8FF00E29AAD /* LMProductsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProductsStore.swift; sourceTree = "<group>"; };
 		79BB56871F27BA4100E29AAD /* LMProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProductViewModel.swift; sourceTree = "<group>"; };
 		79BB56891F27BB5300E29AAD /* LMMappingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMMappingManager.swift; sourceTree = "<group>"; };
+		79BB568C1F27D10400E29AAD /* LMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMBaseViewController.swift; sourceTree = "<group>"; };
+		79BB568E1F27D13400E29AAD /* LMProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProductViewController.swift; sourceTree = "<group>"; };
+		79BB56911F27E13F00E29AAD /* LMProductViewController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LMProductViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		79BB56941F27E6A600E29AAD /* LMProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		79BB56961F27F0BC00E29AAD /* Double+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
 		A4E6740FF7E021E93DD6A63D /* Pods-Landmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landmark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Landmark/Pods-Landmark.debug.xcconfig"; sourceTree = "<group>"; };
 		C4E799D3554A36F5AF01D54F /* Pods_Landmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +145,7 @@
 		79BB563F1F250E2200E29AAD /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
+				79BB568B1F27D0DB00E29AAD /* Controller */,
 				79BB567B1F25156B00E29AAD /* Model */,
 				79BB56781F25145200E29AAD /* Store */,
 				79BB56751F2513B400E29AAD /* Util */,
@@ -177,6 +188,7 @@
 		79BB566F1F2512A800E29AAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				79BB56931F27E68D00E29AAD /* Custom Cell */,
 				79BB56701F2512AD00E29AAD /* Storyboard */,
 			);
 			name = View;
@@ -203,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				79BB56761F2513C000E29AAD /* LMConstants.swift */,
+				79BB56961F27F0BC00E29AAD /* Double+Utils.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -240,6 +253,32 @@
 				79BB56801F2671B900E29AAD /* LMProductModel.swift */,
 			);
 			name = DTO;
+			sourceTree = "<group>";
+		};
+		79BB568B1F27D0DB00E29AAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56901F27E12300E29AAD /* Extension */,
+				79BB568C1F27D10400E29AAD /* LMBaseViewController.swift */,
+				79BB568E1F27D13400E29AAD /* LMProductViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		79BB56901F27E12300E29AAD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56911F27E13F00E29AAD /* LMProductViewController+UICollectionView.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		79BB56931F27E68D00E29AAD /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				79BB56941F27E6A600E29AAD /* LMProductCollectionViewCell.swift */,
+			);
+			name = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,13 +469,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BB56971F27F0BC00E29AAD /* Double+Utils.swift in Sources */,
 				79BB56411F250E2200E29AAD /* AppDelegate.swift in Sources */,
 				79BB56881F27BA4100E29AAD /* LMProductViewModel.swift in Sources */,
+				79BB56921F27E13F00E29AAD /* LMProductViewController+UICollectionView.swift in Sources */,
 				79BB56861F27B8FF00E29AAD /* LMProductsStore.swift in Sources */,
 				79BB567A1F25146000E29AAD /* LMBaseStoreProtocol.swift in Sources */,
 				79BB56771F2513C000E29AAD /* LMConstants.swift in Sources */,
 				79BB56741F25137C00E29AAD /* LMNetworkManager.swift in Sources */,
+				79BB568D1F27D10400E29AAD /* LMBaseViewController.swift in Sources */,
 				79BB56811F2671B900E29AAD /* LMProductModel.swift in Sources */,
+				79BB56951F27E6A600E29AAD /* LMProductCollectionViewCell.swift in Sources */,
+				79BB568F1F27D13400E29AAD /* LMProductViewController.swift in Sources */,
 				79BB567F1F25169200E29AAD /* LMBaseViewModel.swift in Sources */,
 				79BB568A1F27BB5300E29AAD /* LMMappingManager.swift in Sources */,
 			);

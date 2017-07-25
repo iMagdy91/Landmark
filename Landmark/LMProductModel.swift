@@ -14,10 +14,10 @@ enum Currency: String {
     case aed = "AED"
     case sar = "SAR"
     
-    func description() -> (currency:String?, symbol:String?)? {
+    func description() -> (currency:String, symbol:String) {
         switch self {
         case .inr:
-            return ("INR", "")
+            return ("INR", "₹")
         case .aed:
             return ("AED", "AED")
         case .sar:
